@@ -5,6 +5,30 @@ using System.Collections.Generic;
 /// controls the EmotiveWireframe shader on the same object
 /// note: materialPropertyBlock breaks dynamic batching of renderers
 /// </summary>
+
+///controls for the emotions to be applied to the shaders
+[System.Serializable]
+public struct ShaderVariables
+{
+    public string variableSetName;
+    public float opacity;
+    public float smoothness;
+    public Texture2D colorTexture;
+    public Vector2 colorTexTiling;
+    public Color tint;
+    public float colorXSpeed;
+    public float colorZSpeed;
+    public Texture2D displTexture;
+    public Vector2 dispTexTiling;
+    public float displacement;
+    public float displYSpeed;
+    public float displXSpeed;
+    public float displZSpeed;
+    public float avoiderRadius;
+    public float avoiderFalloff;
+    public AudioClip emotionAudio;
+}
+
 public class EmotiveShaderController : MonoBehaviour {
 
 	//some of my meshes were skinned renderers, some were mesh renderers
